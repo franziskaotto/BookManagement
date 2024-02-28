@@ -10,6 +10,7 @@ public class Author {
 
 
     public Author () {
+        authorBookList = new LinkedList<>();
 
     }
 

@@ -5,16 +5,21 @@ public class Book {
     private String isbn;
     private Author author;
 
+    private boolean borrowed = false;
+
+
 
     public Book () {
 
     }
 
+
+    /*
     public Book (String title, String isbn, Author author) {
         this.title = title;
         this.isbn = isbn;
         this.author = author;
-    }
+    }*/
 
 
 
@@ -46,4 +51,12 @@ public class Book {
         this.author = author;
     }
 
+
+    public boolean isBorrowed() {
+        return borrowed;
+    }
+
+    public void setBorrowed(boolean borrowed) {
+        this.borrowed = borrowed;
+    }
 }

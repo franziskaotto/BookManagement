@@ -10,7 +10,6 @@ public class BookManagement {
     public BookManagement(){
         this.bookList = new LinkedList<>();
         this.authorList = new LinkedList<>();
-
     }
 
     public void addNewBook(Book book){
@@ -34,8 +33,26 @@ public class BookManagement {
     }
 
 
+    public LinkedList<Book> searchFor(String searchInput) {
+        LinkedList<Book> result = new LinkedList<>();
+
+        for (Book book : bookList) {
+            if (book.getAuthor() != null && book.getAuthor().getFirstName().contains(searchInput)) {
+                result.add(book);
+            } else if (book.getAuthor() != null && book.getAuthor().getLastName().contains(searchInput)) {
+                result.add(book);
+            } else if (book.getIsbn().contains(searchInput)) {
+                result.add(book);
+            } else if (book.getTitle().contains(searchInput)) {
+                result.add(book);
+            }
 
 
+        }
+        return result;
+    }
+
+   // public boolean setBorrowed(boolean is);
 
 
 

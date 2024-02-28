@@ -1,5 +1,9 @@
 package exercises.library;
 
+import com.sun.jdi.connect.spi.TransportService;
+
+import java.util.LinkedList;
+
 /**
  * Erstelle ein Buchverwaltungssystem.
  * Das Buchverwaltungssystem soll eine Liste von Bücher halten, des Weiteren soll
@@ -85,7 +89,20 @@ public class Main {
 
         bookMngm.printBothLists();
 
-        
+        String searchInput = "Karl";
+
+
+        LinkedList<Book> searchResult = bookMngm.searchFor(searchInput);
+
+
+        for (Book book : searchResult) {
+            System.out.println("searchResult " + book.getTitle());
+        }
+
+
+
+
+
 
 
 
